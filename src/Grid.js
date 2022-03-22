@@ -16,7 +16,7 @@ const Grid = ({ config, data }) => {
             <tr>
               {config.map((el) => {
                 if (el.component) {
-                  return el.component({ data: item[el.field] });
+                  return <td>{el.component({ data: item[el.field] })}</td>;
                 } else {
                   return <td>{item[el.field]}</td>;
                 }
