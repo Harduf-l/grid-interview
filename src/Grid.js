@@ -15,11 +15,11 @@ const Grid = ({ config, data }) => {
           return (
             <tr>
               {config.map((el) => {
-                if (el.component) {
-                  return <td>{el.component({ data: item[el.field] })}</td>;
-                } else {
-                  return <td>{item[el.field]}</td>;
-                }
+                return el.component ? (
+                  <td>{el.component({ data: item[el.field] })}</td>
+                ) : (
+                  <td>{item[el.field]}</td>
+                );
               })}
             </tr>
           );
