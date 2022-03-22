@@ -1,7 +1,6 @@
 import React from "react";
 
 const Grid = ({ config, data }) => {
-  console.log(data);
   return (
     <table>
       <thead>
